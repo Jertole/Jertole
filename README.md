@@ -99,42 +99,4 @@ A simplified projection (illustrative):
 
 > Detailed financial models and ROI projections are included in the **Whitepaper** and **Pitch Deck**.
 
----
 
-## 📄 Documentation
-
-The following documents are part of the project and can be published under `/docs`:
-
-- **Whitepaper JERT v1.5**  
-  - `docs/Whitepaper_JERT_v1_5.pdf`  
-  - `docs/Whitepaper_JERT_v1_5.docx`
-
-- **Pitch Deck JERT v2.0**  
-  - `docs/JERT_PitchDeck_v2.pdf`  
-  - `docs/JERT_PitchDeck_v2.pptx`
-
-These documents describe:
-
-- Tokenomics  
-- Staking model  
-- Technical architecture  
-- Revenue streams  
-- Expansion roadmap  
-
----
-
-## 🌍 Website (GitHub Pages)
-
-Static site structure:
-
-```text
-/ (repo root)
-├── index.html        # Main landing page for JERT
-├── logo.png          # Jertole logo
-├── favicon.png       # Favicon for browser tab
-└── docs/
-    ├── Whitepaper_JERT_v1_5.pdf
-    ├── Whitepaper_JERT_v1_5.docx
-    ├── JERT_PitchDeck_v2.pdf
-
-    └── JERT_PitchDeck_v2.pptx
