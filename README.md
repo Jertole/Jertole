@@ -3,7 +3,7 @@
 **JERT** (Jertole Token) is a **utility digital asset** powering the Cryogas Green Cold Energy Network – a chain of autonomous LNG cold-energy terminals starting from **Aktobe, Kazakhstan** and expanding across Eurasian transport hubs near **Russia and China**.
 
 Public site (GitHub Pages):  
-➡️ `https://jertole.github.io/jertole`  *(replace with actual URL if different)*
+➡️ `https://jertole.github.io/jertole`  
 
 ---
 
@@ -136,4 +136,5 @@ Static site structure:
     ├── Whitepaper_JERT_v1_5.pdf
     ├── Whitepaper_JERT_v1_5.docx
     ├── JERT_PitchDeck_v2.pdf
+
     └── JERT_PitchDeck_v2.pptx
