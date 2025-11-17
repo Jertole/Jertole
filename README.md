@@ -100,3 +100,4 @@ A simplified projection (illustrative):
 > Detailed financial models and ROI projections are included in the **Whitepaper** and **Pitch Deck**.
 
 
+
