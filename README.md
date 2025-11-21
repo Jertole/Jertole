@@ -1,36 +1,50 @@
-# JERT (Jertole Token) 
 
-JERT is a utility token of Cryogas Kazakhstan, designed to support the **Green Cold Energy Network across Eurasia**.
-The token provides access to Cryogas cold-energy logistics terminals, LCNG infrastructure, and related digital services.
+# JERT — Utility Token of Cryogas Kazakhstan  
+### Enabling the Green Cold Energy Network Across Eurasia
 
-This repository hosts the **official public website** of JERT (ENG only), including:
-- token utility and 2-level access model
-- infrastructure overview (Cold Energy Terminals, LCNG, B2B logistics)
-- API layer and VPS-node architecture
-- compliance with AIFC Digital Asset framework and Kazakhstan Ministry of Digital Development guidelines
-- public documents (Whitepaper v5.1)
+JERT is the official **utility token of Cryogas Kazakhstan**, powering access to LNG-based cold-energy terminals, LCNG infrastructure, multimodal logistics and digital services along the **Middle Corridor**.
 
-**JERT** (Jertole Token) is a **utility digital token** powering the Cryogas Green Cold Energy Network – a chain of autonomous LNG cold-energy terminals starting from **Aktobe, Kazakhstan**, and expanding across Eurasian transport hubs near **Russia and China**.
+This repository hosts the **public GitHub website** of JERT, including token overview, utility model, documentation, and SVG-based animations illustrating Eurasian trade flows.
 
-Public site (GitHub Pages):  
-www.jertole.github.io/jertole`  
+---
 
-🌐 Project Overview
+## 🚀 What is JERT?
 
-Cryogas KZ is building a network of **off-grid LNG cold-energy terminals**:
+**JERT is a utility token**, not a security.  
+It provides access to Cryogas services and infrastructure:
 
-- Each terminal uses **LNG cold-energy recovery** and **LNG micro-generation** to operate **independently from national grids**.
-- The **first terminal** is being developed in **Aktobe (Kazakhstan)**.
-- Further terminals are planned at key **border transport nodes** and along the **Middle Corridor** (Azerbaijan – Georgia – Kazakhstan – EU).
+- Cold Energy Terminals (freezing, storage, B2B cold logistics)  
+- LNG → Cold Energy recovery modules  
+- LCNG fuelling stations  
+- Multimodal logistics services (rail, container, reefer)  
+- Digital booking & API connectivity  
+- Partner service integrations
 
-**JERT** is the **digital backbone** of this network:  
-It enables internal settlements, access control, staking, and ecosystem participation.
+JERT follows the AIFC-aligned digital asset framework and is listed in the ecosystem documentation of the **Ministry of Digital Development of Kazakhstan (MDD RK)**.
+
+---
+
+## 🌍 Middle Corridor — Core of the JERT Utility Network
+
+The Cryogas terminal network expands along the **Middle Corridor**:
+
+**EU → Baku (AZ) → Kazakhstan → China → Asia → back to Kazakhstan/EU**
+
+The GitHub site includes a custom animated SVG showing real-time directional flows:
+
+- Forward flow Europe → Caucasus → Kazakhstan → China  
+- Return flow via Asia → Kazakhstan → Europe  
+
+This loop illustrates the physical logistics backbone behind JERT’s utility.
+
+File:
 
 
 
 
 
  
+
 
 
 
