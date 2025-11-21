@@ -213,7 +213,8 @@
     </div>
   </section>
 
-  <!-- ================= ABOUT ================= -->
+ 
+<!-- ================= ABOUT ================= -->
   <section id="about">
     <div class="wrap grid c2">
       <div class="card">
@@ -238,15 +239,124 @@
           other Kazakhstan regions, the Caspian route, Caucasus gateways, and EU distribution nodes.
         </p>
 
-        <!-- ✅ SVG LOOP (Middle Corridor + return via ASIA) -->
-    <div id="about_svg_loop" style="border-radius:14px;border:1px solid var(--line);margin-top:10px;overflow:hidden">
-  <!-- INLINE SVG STARTS HERE -->
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 380" width="100%">
-    ... (вставить весь SVG который я тебе дал) ...
-  </svg>
-  <!-- INLINE SVG ENDS HERE -->
-</div>
-    
+        <!-- ✅ INLINE SVG LOOP -->
+        <div id="about_svg_loop" style="border-radius:14px;border:1px solid var(--line);margin-top:10px;overflow:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 380" width="100%" role="img" aria-label="Middle Corridor flow loop">
+            <defs>
+              <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="3" result="b"/>
+                <feMerge>
+                  <feMergeNode in="b"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+
+              <linearGradient id="routeGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#39e6ff" stop-opacity="0.9"/>
+                <stop offset="50%" stop-color="#7b5cff" stop-opacity="0.9"/>
+                <stop offset="100%" stop-color="#39e6ff" stop-opacity="0.9"/>
+              </linearGradient>
+
+              <radialGradient id="dotGrad">
+                <stop offset="0%" stop-color="#ffffff"/>
+                <stop offset="60%" stop-color="#39e6ff"/>
+                <stop offset="100%" stop-color="#39e6ff" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+
+            <rect x="0" y="0" width="920" height="380" fill="transparent"/>
+
+            <g font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial" font-weight="700" font-size="16" fill="#e8edf3">
+              <g transform="translate(90,175)">
+                <circle r="34" fill="#0e111a" stroke="#39e6ff" stroke-width="2" filter="url(#glow)"/>
+                <text text-anchor="middle" dy="6">EU</text>
+              </g>
+
+              <g transform="translate(300,110)">
+                <circle r="30" fill="#0e111a" stroke="#39e6ff" stroke-width="2" filter="url(#glow)"/>
+                <text text-anchor="middle" dy="6">Baku</text>
+                <text text-anchor="middle" dy="24" font-size="12" fill="#a9b3c1">(AZ)</text>
+              </g>
+
+              <g transform="translate(520,175)">
+                <circle r="36" fill="#0e111a" stroke="#39e6ff" stroke-width="2" filter="url(#glow)"/>
+                <text text-anchor="middle" dy="6">Kazakhstan</text>
+              </g>
+
+              <g transform="translate(760,110)">
+                <circle r="30" fill="#0e111a" stroke="#39e6ff" stroke-width="2" filter="url(#glow)"/>
+                <text text-anchor="middle" dy="6">China</text>
+              </g>
+
+              <g transform="translate(700,300)">
+                <rect x="-34" y="-22" width="68" height="44" rx="8"
+                      fill="#0e111a" stroke="#39e6ff" stroke-width="2" filter="url(#glow)"/>
+                <text text-anchor="middle" dy="6">ASIA</text>
+              </g>
+            </g>
+
+            <g fill="none" stroke="url(#routeGrad)" stroke-width="3" filter="url(#glow)" opacity="0.9">
+              <path id="forwardPath"
+                    d="M124 175
+                       Q210 155 270 125
+                       Q310 105 340 110
+                       Q420 125 490 165
+                       Q535 190 580 175
+                       Q660 145 720 120
+                       Q755 108 790 110" />
+
+              <path id="backwardPath"
+                    d="M790 120
+                       Q770 180 740 230
+                       Q720 265 700 300
+                       Q675 325 640 300
+                       Q590 260 560 220
+                       Q540 195 520 185
+                       Q470 165 410 150
+                       Q350 135 315 145
+                       Q280 155 260 165
+                       Q200 195 124 195" />
+            </g>
+
+            <g>
+              <circle r="9" fill="url(#dotGrad)" filter="url(#glow)">
+                <animateMotion dur="5s" repeatCount="indefinite" rotate="auto">
+                  <mpath href="#forwardPath"/>
+                </animateMotion>
+              </circle>
+              <circle r="7" fill="url(#dotGrad)" filter="url(#glow)">
+                <animateMotion dur="5s" repeatCount="indefinite" begin="1.6s" rotate="auto">
+                  <mpath href="#forwardPath"/>
+                </animateMotion>
+              </circle>
+              <circle r="6" fill="url(#dotGrad)" filter="url(#glow)">
+                <animateMotion dur="5s" repeatCount="indefinite" begin="3.2s" rotate="auto">
+                  <mpath href="#forwardPath"/>
+                </animateMotion>
+              </circle>
+            </g>
+
+            <g opacity="0.85">
+              <circle r="8" fill="url(#dotGrad)" filter="url(#glow)">
+                <animateMotion dur="6s" repeatCount="indefinite" rotate="auto">
+                  <mpath href="#backwardPath"/>
+                </animateMotion>
+              </circle>
+              <circle r="6" fill="url(#dotGrad)" filter="url(#glow)">
+                <animateMotion dur="6s" repeatCount="indefinite" begin="2s" rotate="auto">
+                  <mpath href="#backwardPath"/>
+                </animateMotion>
+              </circle>
+            </g>
+
+            <g font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="12" fill="#a9b3c1">
+              <text x="220" y="70">Forward flow</text>
+              <text x="640" y="355">Return via ASIA → Kazakhstan</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- ================= UTILITY ================= -->
