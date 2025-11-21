@@ -1,157 +1,517 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JERTOLE Token – Official Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JERT — Utility Token of Cryogas</title>
 
-<style>
-body {
-  font-family: system-ui, sans-serif;
-  background: #f6f8fa;
-  margin: 0;
-  padding: 0;
-  color: #222;
-  <h2>Whitepaper v1.7</h2>
-<p>Download the latest version of the JERT Utility Token Whitepaper:</p>
+  <!-- ====== INLINE CSS (lightweight, neon style) ====== -->
+  <style>
+    :root{
+      --bg:#05060a;
+      --bg2:#0a0d14;
+      --neon:#39e6ff;
+      --neon2:#7b5cff;
+      --gold:#f7c948;
+      --text:#e8edf3;
+      --muted:#a9b3c1;
+      --card:#0e111a;
+      --line:rgba(57,230,255,0.25);
+      --radius:18px;
+    }
 
-<a href="docs/Whitepaper_JERT_v1_7.docx" 
-   style="padding:10px 20px; background:#0097c9; color:white; border-radius:6px; text-decoration:none;">
-   Download Whitepaper v1.7 (DOCX)
-</a>
-}
-header {
-  background: linear-gradient(135deg, #0079a0, #00a9da);
-  padding: 35px 20px;
-  color: white;
-  text-align: center;
-}
-h1 { margin: 0 0 10px 0; }
-.lang-switch {
-  margin-top: 10px;
-}
-.lang-switch button {
-  background: white;
-  color: #0079a0;
-  border: none;
-  padding: 6px 14px;
-  margin: 0 5px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 0.9rem;
-}
-.section {
-  background: white;
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-}
-footer {
-  background: #0f172a;
-  color: white;
-  padding: 15px;
-  text-align: center;
-  margin-top: 20px;
-}
-</style>
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 70% -10%, rgba(57,230,255,0.08), transparent),
+                  radial-gradient(1000px 600px at 10% 0%, rgba(123,92,255,0.06), transparent),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
 
+    /* ====== NAV ====== */
+    header{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(8px);
+      background: rgba(5,6,10,0.7);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      max-width:1200px; margin:0 auto; padding:12px 18px;
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      text-decoration:none; color:var(--text);
+      font-weight:700; letter-spacing:0.3px;
+    }
+    .brand img{height:34px; width:auto; filter: drop-shadow(0 0 6px rgba(57,230,255,0.6));}
+    nav ul{
+      display:flex; gap:14px; list-style:none; padding:0; margin:0; flex-wrap:wrap;
+    }
+    nav a{
+      color:var(--muted); text-decoration:none; font-size:14px; font-weight:600;
+      padding:8px 10px; border-radius:10px; transition:0.2s;
+    }
+    nav a:hover{
+      color:var(--text);
+      box-shadow: 0 0 10px rgba(57,230,255,0.5), inset 0 0 0 1px var(--line);
+    }
+
+    /* ====== SECTIONS ====== */
+    section{padding:64px 18px;}
+    .wrap{max-width:1200px; margin:0 auto;}
+    .grid{display:grid; gap:16px;}
+    .c2{grid-template-columns:repeat(2, minmax(0,1fr));}
+    .c3{grid-template-columns:repeat(3, minmax(0,1fr));}
+    @media (max-width:900px){ .c2,.c3{grid-template-columns:1fr;} }
+
+    /* ====== HERO ====== */
+    #hero{
+      padding:76px 18px 56px;
+      background:
+        radial-gradient(900px 500px at 20% 10%, rgba(57,230,255,0.08), transparent),
+        radial-gradient(800px 400px at 90% 0%, rgba(247,201,72,0.06), transparent);
+      border-bottom:1px solid var(--line);
+    }
+    .hero-card{
+      background: linear-gradient(180deg, rgba(14,17,26,0.9), rgba(10,13,20,0.9));
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:28px;
+      box-shadow: 0 0 24px rgba(57,230,255,0.08);
+    }
+    .kicker{
+      color:var(--neon); font-weight:800; letter-spacing:1px; font-size:12px;
+      text-transform:uppercase;
+      text-shadow: 0 0 10px rgba(57,230,255,0.8);
+    }
+    h1{
+      margin:8px 0 8px; font-size:44px; line-height:1.15;
+      text-shadow:0 0 18px rgba(57,230,255,0.25);
+    }
+    .lead{color:var(--muted); font-size:18px; max-width:900px;}
+    .btns{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px;}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      padding:12px 16px; border-radius:12px; font-weight:700; font-size:14px;
+      text-decoration:none; border:1px solid var(--line); color:var(--text);
+      background:rgba(57,230,255,0.07); transition:0.2s;
+      box-shadow: 0 0 10px rgba(57,230,255,0.25);
+    }
+    .btn:hover{transform:translateY(-1px); box-shadow:0 0 18px rgba(57,230,255,0.5);}
+    .btn.gold{
+      background: rgba(247,201,72,0.08);
+      border-color: rgba(247,201,72,0.35);
+      box-shadow:0 0 12px rgba(247,201,72,0.25);
+    }
+
+    /* ====== CARDS ====== */
+    .card{
+      background: var(--card);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding:18px;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
+    }
+    .card h3{margin:0 0 6px; font-size:18px;}
+    .muted{color:var(--muted);}
+    .tag{
+      display:inline-block; font-size:12px; font-weight:800; letter-spacing:0.5px;
+      color:var(--neon); background:rgba(57,230,255,0.08);
+      padding:4px 8px; border-radius:999px; border:1px solid var(--line);
+    }
+
+    /* ====== LISTS ====== */
+    ul.clean{margin:8px 0 0; padding-left:18px;}
+    ul.clean li{margin:6px 0;}
+
+    /* ====== FOOTER ====== */
+    footer{
+      padding:26px 18px; border-top:1px solid var(--line);
+      background:var(--bg2);
+      color:var(--muted); font-size:14px;
+    }
+    .foot{
+      max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+    }
+    .glowline{
+      height:1px;
+      background: linear-gradient(90deg, transparent, var(--neon), transparent);
+      opacity:.6; margin:10px 0 16px;
+      box-shadow:0 0 10px rgba(57,230,255,0.8);
+    }
+  </style>
 </head>
+
 <body>
 
+  <!-- ================= NAV ================= -->
+  <header id="topnav">
+    <div class="nav">
+      <a class="brand" href="#hero">
+        <!-- Replace with your real logo -->
+        <img src="assets/img/logo_jert.png" alt="JERT Logo" id="logo_jert">
+        <span>JERT Token</span>
+      </a>
 
-<header>
-  <!-- LOGO INSERTED HERE -->
-  <div style="margin-bottom:20px;">
-    <img src="jertole_logo_1024.png" alt="JERTOLE Logo" 
-         style="width:140px; height:auto; border-radius:12px;">
-  </div>
+      <nav>
+        <ul>
+          <li><a href="#about" id="nav_about">About</a></li>
+          <li><a href="#utility" id="nav_utility">Utility</a></li>
+          <li><a href="#levels" id="nav_levels">2-Level Access</a></li>
+          <li><a href="#infrastructure" id="nav_infra">Infrastructure</a></li>
+          <li><a href="#api" id="nav_api">API Layer</a></li>
+          <li><a href="#tokenomics" id="nav_tokenomics">Tokenomics</a></li>
+          <li><a href="#compliance" id="nav_compliance">Compliance</a></li>
+          <li><a href="#roadmap" id="nav_roadmap">Roadmap</a></li>
+          <li><a href="#docs" id="nav_docs">Docs</a></li>
+          <li><a href="#contact" id="nav_contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <h1 id="title">JERTOLE (JERT) – Cryogas Energy Network Token</h1>
+  <!-- ================= HERO ================= -->
+  <section id="hero">
+    <div class="wrap hero-card">
+      <div class="kicker" id="hero_kicker">Utility Token • Cryogas Kazakhstan</div>
+      <h1 id="hero_title">JERT powers the Green Cold Energy Network across Eurasia</h1>
+      <p class="lead" id="hero_lead">
+        JERT is a utility token enabling access to Cryogas cold-energy logistics terminals, LCNG infrastructure,
+        and digital services integrated with Kazakhstan’s AIFC digital asset framework.
+      </p>
 
-  <div class="lang-switch">
-    <button onclick="setLang('en')">EN</button>
-    <button onclick="setLang('ru')">RU</button>
-    <button onclick="setLang('kz')">KZ</button>
-  </div>
-</header>
+      <div class="btns" id="hero_buttons">
+        <a class="btn" href="#docs" id="btn_whitepaper">Open Whitepaper v5.1</a>
+        <a class="btn gold" href="#levels" id="btn_levels">How 2-Level Access Works</a>
+        <a class="btn" href="#contact" id="btn_contact">Contact Cryogas</a>
+      </div>
+    </div>
+  </section>
 
-<div class="section">
-  <h2 id="about_title"></h2>
-  <p id="about_text"></p>
-</div>
+  <!-- ================= ABOUT ================= -->
+  <section id="about">
+    <div class="wrap grid c2">
+      <div class="card">
+        <span class="tag" id="about_tag">What is JERT?</span>
+        <h2 id="about_title">A utility token for real infrastructure</h2>
+        <p class="muted" id="about_text">
+          JERT supports the Cryogas ecosystem: LNG cold energy recovery terminals, containerized cold storage,
+          LCNG fueling and B2B logistics hubs. Token utility is linked to measurable terminal services and energy flows.
+        </p>
+        <ul class="clean" id="about_list">
+          <li>Issued by Cryogas Kazakhstan (utility purpose)</li>
+          <li>Integrated with Cryogas Cold Energy Terminals</li>
+          <li>Designed for legal circulation through AIFC-compliant digital asset model</li>
+        </ul>
+      </div>
 
-<div class="section">
-  <h2 id="token_spec_title"></h2>
-  <ul id="token_spec_list"></ul>
-</div>
+      <div class="card">
+        <span class="tag" id="vision_tag">Vision</span>
+        <h3 id="vision_title">From Aktobe to Eurasia</h3>
+        <p class="muted" id="vision_text">
+          The first terminal is deployed in Aktobe as a strategic hub of the Middle Corridor. The network scales to
+          other Kazakhstan regions, the Caspian route, Caucasus gateways, and EU distribution nodes.
+        </p>
+        <!-- optional GIF placeholder -->
+        <img src="assets/gif/cold_loop.gif" alt="Cold Energy Loop" style="width:100%;border-radius:14px;border:1px solid var(--line);margin-top:10px" id="about_gif">
+      </div>
+    </div>
+  </section>
 
-<footer>
-  © 2025 JERTOLE Token · jertole.github.io/jertole
-</footer>
+  <!-- ================= UTILITY ================= -->
+  <section id="utility">
+    <div class="wrap">
+      <div class="glowline"></div>
+      <h2 id="utility_title">Token Utility</h2>
+      <p class="muted" id="utility_lead">
+        JERT is used inside Cryogas terminals and partner services as a digital access and settlement layer.
+      </p>
 
-<script>
-const lang = {
-  en: {
-    about_title: "About JERT Token",
-    about_text:
-      "JERT is the digital backbone of Cryogas' autonomous LNG cold-energy terminals across Eurasia.",
+      <div class="grid c3" id="utility_grid">
+        <div class="card">
+          <h3 id="utility_1_title">Terminal Access</h3>
+          <p class="muted" id="utility_1_text">
+            Holding JERT unlocks service tiers for cold storage booking, LNG cold energy usage,
+            and B2B logistics integration.
+          </p>
+        </div>
+        <div class="card">
+          <h3 id="utility_2_title">Service Discounts</h3>
+          <p class="muted" id="utility_2_text">
+            Tiered JERT holdings provide preferential tariffs for storage, freezing,
+            LCNG fueling, and multimodal handling.
+          </p>
+        </div>
+        <div class="card">
+          <h3 id="utility_3_title">Partner Payments</h3>
+          <p class="muted" id="utility_3_text">
+            JERT can be used for partial settlements with suppliers,
+            contractors and service partners within approved legal frameworks.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    token_spec_title: "Token Specification",
-    token_spec_list: [
-      "Ticker: JERT",
-      "Total Supply: 10,000,000,000",
-      "5 phases × 2B tokens",
-      "Utility token for services, staking and governance"
-    ]
-  },
+  <!-- ================= 2-LEVEL ACCESS ================= -->
+  <section id="levels">
+    <div class="wrap">
+      <div class="glowline"></div>
+      <h2 id="levels_title">2-Level Access Model</h2>
+      <p class="muted" id="levels_lead">
+        The token enables a two-tier participation model aligned with Cryogas terminal economics.
+      </p>
 
-  ru: {
-    about_title: "О токене JERT",
-    about_text:
-      "JERT — цифровая основа автономных терминалов Cryogas на СПГ по всей Евразии.",
+      <div class="grid c2" id="levels_grid">
+        <div class="card">
+          <span class="tag" id="level1_tag">Level 1</span>
+          <h3 id="level1_title">Standard Utility Access</h3>
+          <ul class="clean" id="level1_list">
+            <li>Access to terminal services by holding JERT</li>
+            <li>Booking cold storage capacity and processing slots</li>
+            <li>Digital account & service wallet inside Cryogas ecosystem</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="tag" id="level2_tag">Level 2</span>
+          <h3 id="level2_title">Free Terminal Usage by Code</h3>
+          <ul class="clean" id="level2_list">
+            <li>Users can receive a terminal access code through campaigns or partners</li>
+            <li>Code grants limited free services (e.g., storage time, handling windows)</li>
+            <li>Creates onboarding funnel into full utility ecosystem</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    token_spec_title: "Характеристики токена",
-    token_spec_list: [
-      "Тикер: JERT",
-      "Общий выпуск: 10 000 000 000",
-      "5 фаз × 2 млрд",
-      "Утилитарный токен для сервисов, стейкинга и управления"
-    ]
-  },
+  <!-- ================= INFRASTRUCTURE ================= -->
+  <section id="infrastructure">
+    <div class="wrap">
+      <div class="glowline"></div>
+      <h2 id="infra_title">Infrastructure Linked to JERT</h2>
+      <p class="muted" id="infra_lead">
+        JERT value is tied to real assets and operations, not abstract promises.
+      </p>
 
-  kz: {
-    about_title: "JERT токені туралы",
-    about_text:
-      "JERT – Еуразия бойынша Cryogas автономды LNG суыту терминалдарының цифрлық өзегі.",
+      <div class="grid c3" id="infra_grid">
+        <div class="card">
+          <h3 id="infra_1_title">Cold Energy Terminals</h3>
+          <p class="muted" id="infra_1_text">
+            LNG cold energy recovery applied to freezing and storage modules,
+            enabling low-carbon cold chain capacity.
+          </p>
+        </div>
+        <div class="card">
+          <h3 id="infra_2_title">LCNG Stations</h3>
+          <p class="muted" id="infra_2_text">
+            Integrated LNG/CNG fueling with high-pressure regasification and
+            terminal logistics backbone.
+          </p>
+        </div>
+        <div class="card">
+          <h3 id="infra_3_title">B2B Logistics Hub</h3>
+          <p class="muted" id="infra_3_text">
+            Container yards, rail sidings, reefer service zones,
+            and multimodal Middle Corridor flows.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    token_spec_title: "Токен сипаттамалары",
-    token_spec_list: [
-      "Тикер: JERT",
-      "Жалпы көлем: 10 000 000 000",
-      "5 кезең × 2 млрд",
-      "Қызметтер, стекинг және басқаруға арналған утилити токен"
-    ]
-  }
-};
+  <!-- ================= API LAYER / VPS ================= -->
+  <section id="api">
+    <div class="wrap grid c2">
+      <div class="card">
+        <span class="tag" id="api_tag">API Layer</span>
+        <h2 id="api_title">Digital Infrastructure</h2>
+        <p class="muted" id="api_text">
+          JERT ecosystem uses an API layer to connect terminals, wallets,
+          service bookings, and partner integrations with transparent usage accounting.
+        </p>
+        <ul class="clean" id="api_list">
+          <li>Terminal booking & tariff API</li>
+          <li>On-chain/off-chain service reconciliation</li>
+          <li>Partner service endpoints</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag" id="vps_tag">VPS Nodes</span>
+        <h3 id="vps_title">5 VPS Validator/Service Nodes</h3>
+        <p class="muted" id="vps_text">
+          The system is supported by a distributed VPS-node architecture ensuring
+          availability, auditability, and redundancy for utility services.
+        </p>
+        <ul class="clean" id="vps_list">
+          <li>5 independent VPS nodes</li>
+          <li>Role separation: accounting, compliance, booking, partner gateway, backup</li>
+          <li>Failover & monitoring across regions</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-function setLang(l) {
-  document.getElementById("about_title").textContent = lang[l].about_title;
-  document.getElementById("about_text").textContent = lang[l].about_text;
-  document.getElementById("token_spec_title").textContent = lang[l].token_spec_title;
+  <!-- ================= TOKENOMICS ================= -->
+  <section id="tokenomics">
+    <div class="wrap">
+      <div class="glowline"></div>
+      <h2 id="tokenomics_title">Tokenomics (Public Summary)</h2>
+      <p class="muted" id="tokenomics_lead">
+        Full parameters are described in Whitepaper v5.1. This is a public summary.
+      </p>
 
-  let ul = document.getElementById("token_spec_list");
-  ul.innerHTML = "";
-  lang[l].token_spec_list.forEach(item => {
-    let li = document.createElement("li");
-    li.textContent = item;
-    ul.appendChild(li);
-  });
-}
+      <div class="grid c3" id="tokenomics_grid">
+        <div class="card">
+          <h3 id="tok_1_title">Total Supply</h3>
+          <p class="muted" id="tok_1_text">
+            Fixed total issuance defined in Whitepaper v5.1.
+          </p>
+        </div>
+        <div class="card">
+          <h3 id="tok_2_title">Corporate Wallet A</h3>
+          <p class="muted" id="tok_2_text">
+            Treasury & operational reserve are held in **Corporate Wallet A**
+            under Cryogas control for ecosystem development.
+          </p>
+        </div>
+        <div class="card">
+          <h3 id="tok_3_title">Utility-First Circulation</h3>
+          <p class="muted" id="tok_3_text">
+            Tokens circulate via service usage, partner settlements,
+            and loyalty/onboarding programs.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-setLang("en");
-</script>
+  <!-- ================= COMPLIANCE ================= -->
+  <section id="compliance">
+    <div class="wrap grid c2">
+      <div class="card">
+        <span class="tag" id="aifc_tag">AIFC</span>
+        <h2 id="aifc_title">AIFC Digital Asset Alignment</h2>
+        <p class="muted" id="aifc_text">
+          JERT is structured as a **utility token** with infrastructure-linked use cases,
+          prepared for compliant circulation through AIFC digital asset mechanisms.
+        </p>
+        <ul class="clean" id="aifc_list">
+          <li>Utility purpose only (no investment promise)</li>
+          <li>Transparent supply & service linkage</li>
+          <li>Roadmap toward regulated trading environment</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <span class="tag" id="mdd_tag">Kazakhstan MDD</span>
+        <h3 id="mdd_title">Ministry of Digital Development Requirements</h3>
+        <p class="muted" id="mdd_text">
+          The ecosystem documentation includes infrastructure description,
+          governance, API layer, node architecture, and public tokenomics summary.
+        </p>
+        <ul class="clean" id="mdd_list">
+          <li>Infrastructure & governance disclosure</li>
+          <li>Public whitepaper versioning</li>
+          <li>Service accounting & user protection layer</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ROADMAP ================= -->
+  <section id="roadmap">
+    <div class="wrap">
+      <div class="glowline"></div>
+      <h2 id="roadmap_title">Roadmap</h2>
+
+      <div class="grid c2" id="roadmap_grid">
+        <div class="card">
+          <h3 id="r1_title">Phase 1 — Aktobe Terminal</h3>
+          <ul class="clean" id="r1_list">
+            <li>Cold Energy Terminal launch</li>
+            <li>LCNG fueling integration</li>
+            <li>Utility onboarding (Level 1 & Level 2)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 id="r2_title">Phase 2 — Eurasian Scaling</h3>
+          <ul class="clean" id="r2_list">
+            <li>Replication across Middle Corridor hubs</li>
+            <li>Partner API integrations</li>
+            <li>Preparation for broader compliant listings</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DOCS ================= -->
+  <section id="docs">
+    <div class="wrap">
+      <div class="glowline"></div>
+      <h2 id="docs_title">Documents</h2>
+      <p class="muted" id="docs_lead">
+        Official documentation of the JERT utility ecosystem.
+      </p>
+
+      <div class="grid c2" id="docs_grid">
+        <div class="card">
+          <h3 id="wp_title">Whitepaper v5.1 (PDF)</h3>
+          <p class="muted" id="wp_text">
+            Full tokenomics, technical architecture, utilities, and compliance positioning.
+          </p>
+          <a class="btn" href="docs/JERT_Whitepaper_v5.1.pdf" target="_blank" id="wp_btn">
+            Open PDF
+          </a>
+        </div>
+        <div class="card">
+          <h3 id="deck_title">Public Deck (optional)</h3>
+          <p class="muted" id="deck_text">
+            If you want, upload a public investor/utility deck into /docs and link here.
+          </p>
+          <a class="btn gold" href="#" id="deck_btn">Add later</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact">
+    <div class="wrap grid c2">
+      <div class="card">
+        <h2 id="contact_title">Contact</h2>
+        <p class="muted" id="contact_text">
+          For partnerships, terminal access, and ecosystem integration:
+        </p>
+        <ul class="clean" id="contact_list">
+          <li>Email: <strong>info@cryogas.kz</strong></li>
+          <li>Company: Cryogas Kazakhstan</li>
+          <li>Project: Green Cold Energy Logistics Terminals</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 id="disclaimer_title">Disclaimer</h3>
+        <p class="muted" id="disclaimer_text">
+          JERT is a utility token intended for access to Cryogas services.
+          It does not represent equity, debt, or investment contract.
+          All details are provided in Whitepaper v5.1.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer id="footer">
+    <div class="foot">
+      <div id="footer_left">© Cryogas Kazakhstan — JERT Utility Token</div>
+      <div id="footer_right">Email: info@cryogas.kz</div>
+    </div>
+  </footer>
 
 </body>
 </html>
