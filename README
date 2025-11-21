@@ -1,0 +1,128 @@
+JERT — Utility Token of Cryogas Kazakhstan  
+### Enabling the Green Cold Energy Network Across Eurasia
+
+JERT is the official **utility token of Cryogas Kazakhstan**, powering access to LNG-based cold-energy terminals, LCNG infrastructure, multimodal logistics and digital services along the **Middle Corridor**.
+
+This repository hosts the **public GitHub website** of JERT, including token overview, utility model, documentation, and SVG-based animations illustrating Eurasian trade flows.
+
+---
+
+## 🚀 What is JERT?
+
+**JERT is a utility token**, not a security.  
+It provides access to Cryogas services and infrastructure:
+
+- Cold Energy Terminals (freezing, storage, B2B cold logistics)  
+- LNG → Cold Energy recovery modules  
+- LCNG fuelling stations  
+- Multimodal logistics services (rail, container, reefer)  
+- Digital booking & API connectivity  
+- Partner service integrations
+
+JERT follows the AIFC-aligned digital asset framework and is listed in the ecosystem documentation of the **Ministry of Digital Development of Kazakhstan (MDD RK)**.
+
+---
+
+## 🌍 Middle Corridor — Core of the JERT Utility Network
+
+The Cryogas terminal network expands along the **Middle Corridor**:
+
+**EU → Baku (AZ) → Kazakhstan → China → Asia → back to Kazakhstan/EU**
+
+The GitHub site includes a custom animated SVG showing real-time directional flows:
+
+- Forward flow Europe → Caucasus → Kazakhstan → China  
+- Return flow via Asia → Kazakhstan → Europe  
+
+This loop illustrates the physical logistics backbone behind JERT’s utility.
+
+File:
+
+assets/svg/middle_corridor_loop.svg
+
+---
+
+## 🧊 Infrastructure Linked to JERT
+
+Cryogas builds a network of **physical assets**, to which JERT is directly connected:
+
+### 1. Cold Energy Terminals  
+Using LNG cold energy for freezing, storage, fish processing, and B2B food-grade logistics.
+
+### 2. LCNG Stations  
+Full-cycle LNG import, storage, LNG-to-CNG production, high-pressure regasification.
+
+### 3. B2B Logistics Hubs  
+Container yards, reefer service zones, rail sidings, and multimodal consolidation nodes.
+
+---
+
+## 🔑 2-Level Access Model
+
+### **Level 1 — Standard Utility Access**
+- Access to terminal services  
+- Cold storage booking  
+- Processing capacity  
+- Use via holding JERT  
+
+### **Level 2 — Free Access by Code**
+- Temporary free access  
+- Onboarding through partner campaigns  
+- Converts users into the full utility ecosystem
+
+---
+
+## 📡 Digital Infrastructure (API + 5 VPS Nodes)
+
+JERT services run on a distributed back-end:
+
+- Terminal service API  
+- On-chain / off-chain reconciliation  
+- Booking & tariff endpoints  
+- Compliance node  
+- Partner gateway  
+- Backup/Failsafe node  
+
+Cryogas maintains **5 VPS service/validator nodes** across multiple regions.
+
+---
+
+## 📄 Documentation
+
+### **Whitepaper v5.1 (PDF)**
+Full specification of tokenomics, node architecture, utility model, infrastructure and AIFC alignment.
+
+/docs/JERT_Whitepaper_v5.1.pdf
+
+### **Public Deck (optional)**
+Uploadable to `/docs/`.
+
+---
+
+## 🧭 Roadmap
+
+### **Phase 1 — Aktobe**
+- Cold Energy Terminal launch  
+- LCNG integration  
+- Initial JERT utility rollout  
+
+### **Phase 2 — Eurasian Scaling**
+- Expansion along the Middle Corridor  
+- API/Partner integrations  
+- Preparation for compliant listings  
+
+---
+
+## 📬 Contact
+
+**Cryogas Kazakhstan**  
+Email: **info@cryogas.kz**  
+Project: *Green Cold Energy Logistics Terminals*  
+Slogan: *“Building the Green Cold Energy Network across Eurasia”*
+
+---
+
+## ⚠️ Disclaimer
+JERT is a **utility token** intended for access to Cryogas services.  
+It does **not** represent equity, debt or investment contract.  
+See Whitepaper v5.1 for details.
