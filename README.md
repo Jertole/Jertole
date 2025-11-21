@@ -38,13 +38,3 @@ The GitHub site includes a custom animated SVG showing real-time directional flo
 This loop illustrates the physical logistics backbone behind JERT’s utility.
 
 File:
-
-
-
-
-
- 
-
-
-
-
