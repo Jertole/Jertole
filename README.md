@@ -10,10 +10,10 @@ This repository hosts the **official public website** of JERT (ENG only), includ
 - compliance with AIFC Digital Asset framework and Kazakhstan Ministry of Digital Development guidelines
 - public documents (Whitepaper v5.1)
 
-**JERT** (Jertole Token) is a **utility digital token ** powering the Cryogas Green Cold Energy Network – a chain of autonomous LNG cold-energy terminals starting from **Aktobe, Kazakhstan** and expanding across Eurasian transport hubs near **Russia and China**.
+**JERT** (Jertole Token) is a **utility digital token** powering the Cryogas Green Cold Energy Network – a chain of autonomous LNG cold-energy terminals starting from **Aktobe, Kazakhstan**, and expanding across Eurasian transport hubs near **Russia and China**.
 
 Public site (GitHub Pages):  
-➡️ `https://jertole.github.io/jertole`  
+`https://jertole.github.io/jertole`  
 
 🌐 Project Overview
 
@@ -31,4 +31,5 @@ It enables internal settlements, access control, staking, and ecosystem particip
 
 
  
+
 
