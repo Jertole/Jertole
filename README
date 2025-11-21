@@ -50,7 +50,7 @@ Cryogas builds a network of **physical assets**, to which JERT is directly conne
 Using LNG cold energy for freezing, storage, fish processing, and B2B food-grade logistics.
 
 ### 2. LCNG Stations  
-Full-cycle LNG import, storage, LNG-to-CNG production, high-pressure regasification.
+Full-cycle LNG import, storage, LNG-to-CNG production, and high-pressure regasification.
 
 ### 3. B2B Logistics Hubs  
 Container yards, reefer service zones, rail sidings, and multimodal consolidation nodes.
@@ -89,10 +89,10 @@ Cryogas maintains **5 VPS service/validator nodes** across multiple regions.
 
 ## 📄 Documentation
 
-### **Whitepaper v5.1 (PDF)**
+### **Whitepaper (PDF)**
 Full specification of tokenomics, node architecture, utility model, infrastructure and AIFC alignment.
 
-/docs/JERT_Whitepaper_v5.1.pdf
+/docs/JERT_Whitepaper_pdf
 
 ### **Public Deck (optional)**
 Uploadable to `/docs/`.
@@ -125,4 +125,4 @@ Slogan: *“Building the Green Cold Energy Network across Eurasia”*
 ## ⚠️ Disclaimer
 JERT is a **utility token** intended for access to Cryogas services.  
 It does **not** represent equity, debt or investment contract.  
-See Whitepaper v5.1 for details.
+See Whitepaper for details.
