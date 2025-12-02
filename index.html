@@ -75,7 +75,7 @@
       box-shadow: 0 0 10px rgba(57,230,255,0.5), inset 0 0 0 1px var(--line);
     }
 
-    /* ====== SECTIONS ====== */
+    /* ====== SECTIONS / LAYOUT ====== */
     section{padding:64px 18px;}
     .wrap{max-width:1200px; margin:0 auto;}
     .grid{display:grid; gap:16px;}
@@ -108,6 +108,7 @@
       text-shadow:0 0 18px rgba(57,230,255,0.25);
     }
     .lead{color:var(--muted); font-size:18px; max-width:900px;}
+    .sub-info{color:var(--muted); font-size:14px; margin-top:8px;}
     .btns{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px;}
     .btn{
       display:inline-flex; align-items:center; justify-content:center; gap:8px;
@@ -196,16 +197,23 @@
   </header>
 
   <!-- ================= HERO ================= -->
- <h1 class="title-neon">JERT — USD-Denominated Digital Utility Token</h1>
-<p class="subtitle">
-  A global settlement and coordination asset powering the Cryogas cold-energy ecosystem,
-  LCNG infrastructure and B2B industrial services across Eurasia.
-</p>
-<p class="sub-info">
-  JERT maintains a USD-based valuation standard, independent of any local currency exposure.
-</p>
- 
-<!-- ================= ABOUT ================= -->
+  <section id="hero">
+    <div class="wrap">
+      <div class="hero-card">
+        <div class="kicker">USD-DENOMINATED DIGITAL UTILITY</div>
+        <h1>JERT — USD-Denominated Digital Utility Token</h1>
+        <p class="lead">
+          A global settlement and coordination asset powering the Cryogas cold-energy ecosystem,
+          LCNG infrastructure and B2B industrial services across Eurasia.
+        </p>
+        <p class="sub-info">
+          JERT maintains a USD-based valuation standard, independent of any local currency exposure.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
   <section id="about">
     <div class="wrap grid c2">
       <div class="card">
@@ -232,8 +240,13 @@
 
         <!-- ✅ INLINE SVG LOOP -->
         <div id="about_svg_loop" style="border-radius:14px;border:1px solid var(--line);margin-top:10px;overflow:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 380" width="100%" height:auto;display:block;"preserveAspectRatio="xMidYMidmeet"
-            role="img' aria-label="Middle Corridor flow loop">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 920 380"
+               width="100%"
+               style="height:auto;display:block;"
+               preserveAspectRatio="xMidYMid meet"
+               role="img"
+               aria-label="Middle Corridor flow loop">
             <defs>
               <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
                 <feGaussianBlur stdDeviation="3" result="b"/>
@@ -352,21 +365,26 @@
   </section>
 
   <!-- ================= UTILITY ================= -->
-  
-<h2>Utility of JERT</h2>
-<p>
-  JERT serves as a universal digital unit for:
-  - LCNG station operations,
-  - cold-energy terminal integration,
-  - B2B industrial logistics,
-  - long-term leasing and staking contracts,
-  - infrastructure financing across Eurasia.
-</p>
-
-<p>
-  USD-denomination ensures predictable pricing for cross-border logistics,
-  energy services, and equipment procurement.
-</p>
+  <section id="utility">
+    <div class="wrap">
+      <div class="glowline"></div>
+      <h2>Utility of JERT</h2>
+      <p class="muted">
+        JERT serves as a universal digital unit for Cryogas infrastructure and services.
+      </p>
+      <ul class="clean">
+        <li>LCNG station operations</li>
+        <li>Cold-energy terminal integration</li>
+        <li>B2B industrial logistics</li>
+        <li>Long-term leasing and staking contracts</li>
+        <li>Infrastructure financing across Eurasia</li>
+      </ul>
+      <p class="muted">
+        USD-denomination ensures predictable pricing for cross-border logistics,
+        energy services, and equipment procurement.
+      </p>
+    </div>
+  </section>
 
   <!-- ================= 2-LEVEL ACCESS ================= -->
   <section id="levels">
@@ -467,36 +485,36 @@
     </div>
   </section>
 
-  <!-- ================= TOKENOMICS ================= -->
-<h2>JERT Token — USD Standard</h2>
-<p>
-  JERT operates as a USD-denominated digital asset within the Cryogas ecosystem.
-  All underlying economic models, service fees, B2B leasing, infrastructure transactions
-  and service-level commitments are valued in USD for international interoperability.
-</p>
-<p>
-  JERT is not pegged to any national currency (incl. KZT). This eliminates local currency risk,
-  ensures price stability for suppliers and contractors, and enables participation of global investors.
-</p>
+  <!-- ================= TOKENOMICS / USD MODEL ================= -->
+  <section id="tokenomics">
+    <div class="wrap">
+      <div class="glowline"></div>
+      <h2>JERT Token — USD Standard</h2>
+      <p class="muted">
+        JERT operates as a USD-denominated digital asset within the Cryogas ecosystem.
+        All underlying economic models, service fees, B2B leasing, infrastructure transactions
+        and service-level commitments are valued in USD for international interoperability.
+      </p>
+      <p class="muted">
+        JERT is not pegged to any national currency (incl. KZT). This eliminates local currency risk,
+        ensures price stability for suppliers and contractors, and enables participation of global investors.
+      </p>
 
-<section id="economics" class="section">
-  <div class="container">
-    <h2>Economic Model — USD Based</h2>
-    <p>
-      The value of JERT is expressed in USD, ensuring transparent and stable pricing across all
-      Cryogas operations. Industrial customers, suppliers and contractors settle infrastructure
-      services using JERT, priced in USD-equivalent terms.
-    </p>
+      <h3>Economic Model — USD Based</h3>
+      <p class="muted">
+        The value of JERT is expressed in USD, ensuring transparent and stable pricing across all
+        Cryogas operations. Industrial customers, suppliers and contractors settle infrastructure
+        services using JERT, priced in USD-equivalent terms.
+      </p>
+      <ul class="clean">
+        <li>✔ All services and contracts valued in USD</li>
+        <li>✔ Clear conversion logic between JERT and USD</li>
+        <li>✔ No exposure to KZT or other local currency inflation</li>
+        <li>✔ Fully aligned with international procurement standards</li>
+      </ul>
+    </div>
+  </section>
 
-    <ul>
-      <li>✔ All services and contracts valued in USD</li>
-      <li>✔ Clear conversion logic between JERT and USD</li>
-      <li>✔ No exposure to KZT or other local currency inflation</li>
-      <li>✔ Fully aligned with international procurement standards</li>
-    </ul>
-  </div>
-</section>
-  
   <!-- ================= COMPLIANCE ================= -->
   <section id="compliance">
     <div class="wrap grid c2">
@@ -504,7 +522,7 @@
         <span class="tag" id="aifc_tag">AIFC</span>
         <h2 id="aifc_title">AIFC Digital Asset Alignment</h2>
         <p class="muted" id="aifc_text">
-          JERT is structured as a **utility token** with infrastructure-linked use cases,
+          JERT is structured as a utility token with infrastructure-linked use cases,
           prepared for compliant circulation through AIFC digital asset mechanisms.
         </p>
         <ul class="clean" id="aifc_list">
@@ -572,7 +590,7 @@
           <p class="muted" id="wp_text">
             Full tokenomics, technical architecture, utilities, and compliance positioning.
           </p>
-          <a class="btn" href="Whitepaper.pdf"</a>
+          <a class="btn" href="Whitepaper.pdf" id="wp_btn">
             Open PDF
           </a>
         </div>
@@ -606,7 +624,7 @@
         <p class="muted" id="disclaimer_text">
           JERT is a utility token intended for access to Cryogas services.
           It does not represent equity, debt, or an investment contract.
-          All details are provided in the Whitepaper 
+          All details are provided in the Whitepaper.
         </p>
       </div>
     </div>
