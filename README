@@ -1,128 +1,126 @@
-JERT — Utility Token of Cryogas Kazakhstan  
-### Enabling the Green Cold Energy Network Across Eurasia
+# JERT Network — USD-Denominated Digital Utility Layer  
+### Building the Green Cold Energy Network Across Eurasia  
+**Cryogas Kazakhstan / Vitlax Nordic AB (Sweden) / SY Power Energy (Switzerland)**
 
-JERT is the official **utility token of Cryogas Kazakhstan**, powering access to LNG-based cold-energy terminals, LCNG infrastructure, multimodal logistics and digital services along the **Middle Corridor**.
+The **JERT Network** is a permissioned EVM-based digital infrastructure powering the Cryogas cold-energy ecosystem, LCNG stations, B2B logistics services, and industrial terminals across Eurasia.  
+JERT is a **USD-denominated digital utility token** used for infrastructure access, service settlement, leasing, reconciliation and cross-border coordination.
 
-This repository hosts the **public GitHub website** of JERT, including token overview, utility model, documentation, and SVG-based animations illustrating Eurasian trade flows.
+This monorepo contains the full technical stack of the JERT Network:
+# 🌍 USD-Denominated Model
 
----
+JERT functions as a **USD-based digital unit**, not tied to any national currency.  
+All infrastructure pricing — cold-energy services, LCNG fueling, B2B logistics, leasing contracts — is expressed in USD.
 
-## 🚀 What is JERT?
-
-**JERT is a utility token**, not a security.  
-It provides access to Cryogas services and infrastructure:
-
-- Cold Energy Terminals (freezing, storage, B2B cold logistics)  
-- LNG → Cold Energy recovery modules  
-- LCNG fuelling stations  
-- Multimodal logistics services (rail, container, reefer)  
-- Digital booking & API connectivity  
-- Partner service integrations
-
-JERT follows the AIFC-aligned digital asset framework and is listed in the ecosystem documentation of the **Ministry of Digital Development of Kazakhstan (MDD RK)**.
+### Advantages
+- Eliminates FX risk (no exposure to KZT or other local currencies)  
+- Standardised international pricing for suppliers and contractors  
+- Transparent valuation of infrastructure services  
+- Suitable for cross-border B2B operations  
+- Enables integration into global digital asset ecosystems
 
 ---
 
-## 🌍 Middle Corridor — Core of the JERT Utility Network
+# 🧱 Architecture Overview
 
-The Cryogas terminal network expands along the **Middle Corridor**:
+### **1. Permissioned EVM Network (IBFT/PoA)**  
+Located in `/evm-chain`  
+- Static nodes configuration  
+- Genesis file  
+- 5 VPS validators/service nodes  
+- Role separation (reconciliation, booking, compliance, gateway, backup)  
+- Docker-compose for local development
 
-**EU → Baku (AZ) → Kazakhstan → China → Asia → back to Kazakhstan/EU**
+### **2. Smart Contracts**  
+Located in `/smart-contracts`
+- **JERTToken.sol** — fixed-supply utility token  
+- **TreasuryMultisig.sol** — 2/3 governance multisig (submit/confirm/execute/revoke)  
+- **LeaseContract.sol** — prepaid infrastructure leasing logic  
+- **KYCRegistry.sol** — address whitelist / AIFC compliance  
+- **ComplianceGateway.sol** — middleware contract  
 
-The GitHub site includes a custom animated SVG showing real-time directional flows:
+Includes full Hardhat test suite.
 
-- Forward flow Europe → Caucasus → Kazakhstan → China  
-- Return flow via Asia → Kazakhstan → Europe  
+### **3. API Gateway (Node.js/TS)**  
+Located in `/api-gateway`
+- `/tx/send` — signing/broadcasting  
+- `/tx/history` — on-chain event lookup  
+- `/wallet` — account services  
+- `/oracle` — Middle Corridor oracle integration  
+- `/compliance` — AML/KYC middleware  
+- Unified USD valuation responses
 
-This loop illustrates the physical logistics backbone behind JERT’s utility.
+### **4. Corporate Wallet (React)**  
+Located in `/corporate-wallet`
+- Multisig treasury dashboard  
+- Approvals UI (submit/confirm/revoke/execute)  
+- Live JERT balance & history  
+- API integration  
 
-File:
-
-assets/svg/middle_corridor_loop.svg
-
----
-
-## 🧊 Infrastructure Linked to JERT
-
-Cryogas builds a network of **physical assets**, to which JERT is directly connected:
-
-### 1. Cold Energy Terminals  
-Using LNG cold energy for freezing, storage, fish processing, and B2B food-grade logistics.
-
-### 2. LCNG Stations  
-Full-cycle LNG import, storage, LNG-to-CNG production, and high-pressure regasification.
-
-### 3. B2B Logistics Hubs  
-Container yards, reefer service zones, rail sidings, and multimodal consolidation nodes.
-
----
-
-## 🔑 2-Level Access Model
-
-### **Level 1 — Standard Utility Access**
-- Access to terminal services  
-- Cold storage booking  
-- Processing capacity  
-- Use via holding JERT  
-
-### **Level 2 — Free Access by Code**
-- Temporary free access  
-- Onboarding through partner campaigns  
-- Converts users into the full utility ecosystem
+### **5. Mobile Wallet (Flutter)**  
+Located in `/mobile-wallet`
+- Non-custodial  
+- On-chain tx history  
+- JERT send/receive  
+- Local storage for keys  
+- Clean USD-based UI logic
 
 ---
 
-## 📡 Digital Infrastructure (API + 5 VPS Nodes)
+# 🔑 Token Model (USD Standard)
 
-JERT services run on a distributed back-end:
-
-- Terminal service API  
-- On-chain / off-chain reconciliation  
-- Booking & tariff endpoints  
-- Compliance node  
-- Partner gateway  
-- Backup/Failsafe node  
-
-Cryogas maintains **5 VPS service/validator nodes** across multiple regions.
+- **Total supply:** 1,000,000,000,000 JERT  
+- **50% Infrastructure Reserve** (cold terminals, LCNG, B2B logistics)  
+- **50% Distributed (Variant B)**  
+- **No minting**  
+- **No burning mechanisms linked to speculation**  
+- **USD valuation layer** for pricing terminals, storage, energy flows, logistics routes
 
 ---
 
-## 📄 Documentation
+# ⚖ Compliance
 
-### **Whitepaper (PDF)**
-Full specification of tokenomics, node architecture, utility model, infrastructure and AIFC alignment.
+JERT is a **utility token** under the AIFC digital asset framework.  
+It is not equity, not debt, and not a security.  
+Used strictly for service access, billing and infrastructure coordination.
 
-/docs/JERT_Whitepaper_pdf
-
-### **Public Deck (optional)**
-Uploadable to `/docs/`.
+KYC/AML is enforced through:
+- API compliance middleware  
+- On-chain KYCRegistry  
+- Gateway-level whitelisting  
 
 ---
 
-## 🧭 Roadmap
+# 📚 Documentation
 
-### **Phase 1 — Aktobe**
-- Cold Energy Terminal launch  
+All official documents in `/docs`:
+
+- **Whitepaper v5.3 — USD Edition**  
+- Architecture diagrams  
+- Technical specification (TZ)  
+- Multisig / Wallet / EVM chain documentation  
+
+---
+
+# 🧭 Roadmap
+
+### Phase 1 — Aktobe
+- Cold Energy Terminal deployment  
 - LCNG integration  
-- Initial JERT utility rollout  
+- Digital booking via JERT  
+- Multisig treasury (2/3)  
 
-### **Phase 2 — Eurasian Scaling**
-- Expansion along the Middle Corridor  
-- API/Partner integrations  
-- Preparation for compliant listings  
+### Phase 2 — Eurasia Scaling
+- Middle Corridor expansion: EU → AZ → KZ → CN  
+- Oracle and route integration  
+- Compliance preparation (AIFC)  
+- Global partner onboarding  
 
 ---
 
-## 📬 Contact
+# 📝 Contact
 
 **Cryogas Kazakhstan**  
-Email: **info@cryogas.kz**  
-Project: *Green Cold Energy Logistics Terminals*  
-Slogan: *“Building the Green Cold Energy Network across Eurasia”*
+info@cryogas.kz  
 
----
-
-## ⚠️ Disclaimer
-JERT is a **utility token** intended for access to Cryogas services.  
-It does **not** represent equity, debt or investment contract.  
-See Whitepaper for details.
+Slogan:  
+**“Building the Green Cold Energy Network across Eurasia”**
