@@ -10,18 +10,18 @@ This repository is kept for historical reference only.
 
 
 
-# JERT Network - USD-Denominated Digital Utility Layer  
+# JERT Network Digital Utility Layer  
 ### Building the Green Cold Energy Network Across Eurasia  
-**Cryogas Kazakhstan / Vitlax Nordic AB (Sweden) / SY Power Energy (Switzerland)**
+**Cryogas Kazakhstan / JERT AB (Sweden) / SY Power Energy (Switzerland)**
 
 The **JERT Network** is a permissioned EVM-based digital infrastructure powering the Cryogas cold-energy ecosystem, LCNG stations, B2B logistics services, and industrial terminals across Eurasia.  
-JERT is a **USD-denominated digital utility token** used for infrastructure access, service settlement, leasing, reconciliation and cross-border coordination.
+JERT is a digital utility token** used for infrastructure access, service settlement, leasing, reconciliation, and cross-border coordination.
 
 This monorepo contains the full technical stack of the JERT Network:
-# 🌍 USD-Denominated Model
+# 🌍 ETH Denominated Model
 
-JERT functions as a **USD-based digital unit**, not tied to any national currency.  
-All infrastructure pricing — cold-energy services, LCNG fueling, B2B logistics, leasing contracts — is expressed in USD.
+JERT functions as a digital unit, not tied to any national currency.  
+All infrastructure pricing — cold-energy services, LCNG fueling, B2B logistics, leasing contracts — is expressed in JERT.
 
 ### Advantages
 - Eliminates FX risk (no exposure to KZT or other local currencies)  
@@ -91,9 +91,9 @@ Located in `/mobile-wallet`
 
 # ⚖ Compliance
 
-JERT is a **utility token** under the AIFC digital asset framework.  
+JERT is a global utility token, a Cryogas terminal  in Kazakhstan under the AIFC digital asset framework.  
 It is not equity, not debt, and not a security.  
-Used strictly for service access, billing and infrastructure coordination.
+Used strictly for service access, billing, and infrastructure coordination.
 
 KYC/AML is enforced through:
 - API compliance middleware  
@@ -106,7 +106,7 @@ KYC/AML is enforced through:
 
 All official documents in `/docs`:
 
-- **Whitepaper v5.3 — USD Edition**  
+- **Whitepaper**  
 - Architecture diagrams  
 - Technical specification (TZ)  
 - Multisig / Wallet / EVM chain documentation  
